@@ -14,7 +14,6 @@ app.engine('ejs',ejs.renderFile);
 app.use(express.static('public'));
 
 var mysql      = require('mysql');
-
 var connection = mysql.createConnection({
   database : 'granfrontend_work',
   host     : 'localhost',
