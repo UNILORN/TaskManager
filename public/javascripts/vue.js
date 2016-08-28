@@ -1,5 +1,5 @@
 
-var socket = io();
+var socket = io.connect('http://localhost:3000');
 document.addEventListener("DOMContentLoaded", function() {
 
     var content = new Vue({
@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(this.list[index].answer_input);
             this.list[index].problem ='';
             socket.emit('before_req',{before:this.list[index].before_input,id:index+1});
+            console.log("afafa");
           },
           before_submit:function(index){
             console.log(this.list[index].before_input);
