@@ -5,27 +5,38 @@ body {
     height: 100%;
     background-color: #00a381;
 }
-.content {
-    float: left;
-    margin-left: 7%;
-    height: 100%;
+.button_design{
+  padding:10px;
+  border-radius: 50% 50% 50% 50%;
+  background-color: rgba(255, 0, 0, 0);
+  border: solid 1px;
+  transition:background-color 0.3s ease;
+  margin-left: 6%;
+}
+.button_design:hover{
+background-color: rgba(0, 0, 0, 0.3);
+}
+.task{
+  height:100%;
 }
 .task-table {
-    height: 550px;
-    width: 1137px;
+    height: 81.5%;
+    width: 89.5%;
     border: solid 10px;
     margin-top: 5%;
     margin-bottom: 30px;
     background-color: #e83929;
+    float: left;
+    margin-left: 4.5%;
 }
 .date {
     margin-left: 3%;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 .before {
     position: absolute;
     margin-left: 1%;
-    width: 18%;
+    width: 21%;
     border-right: solid 1px;
     word-wrap: break-word;
     height: 71%;
@@ -37,13 +48,12 @@ body {
   margin-bottom:8%;
 }
 .before li{
-  margin-left: 5%;
-  margin-bottom:5%;
+  
   list-style: none;
 }
 .after {
     position: absolute;
-    margin-left: 21%;
+    margin-left: 24%;
     word-wrap: break-word;
     width: 20%;
     height: 71%;
@@ -55,18 +65,17 @@ body {
   margin-bottom:8%;
 }
 .after li{
-  margin-left: 5%;
-  margin-bottom:5%;
+
   list-style: none;
 }
 .problem {
-    margin-left: 42%;
+    margin-left: 46.2%;
     position: absolute;
     width: 20%;
     border: solid 1px;
     background-color: orange;
     word-wrap: break-word;
-    height: 78%;
+    height: 81.3%;
     padding-right: 1%;
     overflow-y: auto;
 }
@@ -74,23 +83,21 @@ body {
     margin-left: 5%;
     margin-bottom:8%;
 }
-.problem p{
+.problem h3{
   margin-top: 2%;
   margin-left:2%;
 }
 .problem li {
-    margin-left: 5%;
-    padding-bottom:5%;
     list-style: none;
 }
 .answer {
-    margin-left: 63.1%;
+    margin-left: 67.3%;
     position: absolute;
     width: 20%;
     border: solid 1px;
     background-color: yellow;
     word-wrap: break-word;
-        height: 78%;
+    height: 81.3%;
     padding-right: 1%;
     overflow-y: auto;
 }
@@ -98,12 +105,11 @@ body {
     margin-left: 5%;
     margin-bottom:8%;
 }
-.answer p{
+.answer h3{
   margin-top: 2%;
   margin-left:2%;
 }
 .answer li{
-    margin-left: 5%;
-    margin-bottom:5%;
+
     list-style: none;
 }

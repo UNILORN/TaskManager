@@ -1,8 +1,9 @@
 var express = require('express');
-var app = express();
-var http = require('http');
-var server = http.createServer(app);
-var io = require('socket.io')(server)
+var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var ejs = require('ejs');
@@ -15,23 +16,21 @@ app.use(express.static(__dirname + '/public'));
 
 
 
-function new_text(list){
-  socket.emit('new_text',list);
-  console.log(list);
-}
+
 
 io.on('connection',function(socket){
   socket.on('before_req',function(list){
-    new_text(list);
+    socket.emit('new_text',list);
   });
   socket.on('after_req',function(list){
-    new_text(list);
+    socket.emit('new_text',list);
   });
   socket.on('answer_req',function(list){
-    new_text(list);
+    socket.emit('new_text',list);
   });
   socket.on('problem_req',function(list){
-    new_text(list);
+    socket.emit('new_text',list);
+    console.log(list);
   });
 });
 
@@ -80,7 +79,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-app.listen(3000);
+server.listen(3000);
 
 
 module.exports = app;
